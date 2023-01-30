@@ -1,5 +1,7 @@
 package ie.tudublin;
 
+import com.jogamp.nativewindow.util.Rectangle;
+
 import processing.core.PApplet;
 
 public class HelloProcessing extends PApplet
@@ -7,7 +9,7 @@ public class HelloProcessing extends PApplet
 
 	public void settings()
 	{
-		size(1000, 1000);
+		size(500, 500);
 	}
 
 	public void setup() {
@@ -36,16 +38,23 @@ public class HelloProcessing extends PApplet
 	
 	public void draw()
 	{	
-		stroke(255);
-		line(10,10,100,100); // x1 y1 x2 y2
+		background(255,0,0);
 		noStroke();
-		circle(300,250,70); // cx, cy, d
-		fill(255,0,0);
-		rect(10,300,20,100); // tlx1, tly1,w h
-		stroke(127);
-		fill(0,250,250);
-		noFill();
-		strokeWeight(1);
-		triangle(700, 200, 700, 500, 80, 70);
+		fill(45,45,45);
+		circle(width/2,height/2 ,400);
+		
+		noStroke();
+		fill(150,0,150);
+		triangle(width-50, height-100, 50, height-100, width/2, 0);
+
+		noStroke();
+		fill(240,240,45);
+		ellipse(width/2, height/2, 225, 100);
+
+		noStroke();
+		fill(0,0,75);
+		ellipse(width/2, height/2, 100, 100);
+		
 	}
 }
+	
