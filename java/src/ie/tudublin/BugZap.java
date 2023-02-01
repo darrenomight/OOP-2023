@@ -1,67 +1,92 @@
 package ie.tudublin;
 
+import java.util.concurrent.TimeUnit;
+
 import processing.core.PApplet;
 
 public class BugZap extends PApplet
 {
+	float playerX = 200;
+	float playerY = 400;
+	float playerWidth = 50;
 
 	public void settings()
 	{
 		size(500, 500);
 	}
 
-	public void setup() {
-		colorMode(HSB);
-		background(0);
-
-		x1 = random(0, width);
-		x2 = random(0, width);
-		y1 = random(0, height);
-		y2 = random(0, height);
-
-		float range = 5;
-
-		x1dir = random(-range, range);
-		x2dir = random(-range, range);
-		y1dir = random(-range, range);
-		y2dir = random(-range, range);
-
-		smooth();
+	void drawPlayer(float x, float y, float w )
+	{
+		float h = w /3;
+		strokeWeight(h);
+		stroke(123,40,200);
+		line(x, y, x+w, y);
 		
 	}
 
-	float x1, y1, x2, y2;
-	float x1dir, x2dir, y1dir, y2dir;
-	float c = 0;
+	void drawBug(float x, float y, float d )
+	{
+		
+		fill(0,0,255);
+		circle(x, y, d);
 	
-	public void draw()
-	{	
-		strokeWeight(2);
-		stroke(c, 255, 255);
-		c = (c + 1f) % 255;
-		line(x1, y1, x2, y2);
-
-		x1 += x1dir;
-		x2 += x2dir;
-		y1 += y1dir;
-		y2 += y2dir;
-		
-		if (x1 < 0 || x1 > width)
-		{
-			x1dir = - x1dir;
-		}
-		if (y1 < 0 || y1 > height)
-		{
-			y1dir = - y1dir;
-		}
-
-		if (x2 < 0 || x2 > width)
-		{
-			x2dir = - x2dir;
-		}
-		if (y2 < 0 || y2 > height)
-		{
-			y2dir = - y2dir;
-		}
 	}
+
+	public void draw()
+	{
+		float BugX = random(500);
+		float BugY = random(350);
+		float bugD = random(15);	
+		
+		background(0);
+		drawPlayer(playerX,playerY,playerWidth);
+		
+		if ((frameCount % 180) == 0)
+		{
+    	// Do something	
+		drawBug(BugX,BugY,bugD);
+		}		
+		}
+	public void setup() {
+		
+	}
+
+	public void keyPressed()
+	{
+		if (keyCode == LEFT)
+		{
+			if(playerX > 0)
+			{
+				System.out.println("Left arrow pressed");
+				playerX = playerX-20;
+			}
+			
+		}
+		if (keyCode == RIGHT)
+		{
+			if(playerX < 500)
+			{
+				System.out.println("Right arrow pressed");
+				playerX = playerX+20;
+			}
+			
+		}
+		if (key == ' ')
+		{
+			System.out.println("SPACE key pressed laser fired");
+			laserFire(playerX, playerY);
+	
+		}
+	}	
+	
+	public void laserFire(float x,float y)
+	{
+		
+		stroke(255,0,120);
+		line(playerX+25, playerY, playerX+25, playerY-450);
+	}
+	
+	
+
+	
 }
