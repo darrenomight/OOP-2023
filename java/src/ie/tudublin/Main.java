@@ -29,7 +29,20 @@ public class Main
 		penny.setName("Penny");
 		penny.speak();
 
-		loops();
+		//loops();
+		//lab3_Excercise();
+		firstloop();
 	}
 	
+	public static void lab3_Excercise()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new lab3_Excercise());
+    }
+
+	public static void firstloop ()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new firstloop());
+    }
 }
