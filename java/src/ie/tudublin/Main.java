@@ -23,15 +23,18 @@ public class Main
 	
 	public static void main(String[] args)
 	{
-		System.out.println("Hello world");
+		System.out.println("Hello world, and Darren");
 		
-		Dog penny = new Dog();
-		penny.setName("Penny");
-		penny.speak();
+		//Dog penny = new Dog();
+		//penny.setName("Penny");
+		//penny.speak();
 
 		//loops();
 		//lab3_Excercise();
-		firstloop();
+		//firstloop();
+		//second_loop();
+		//Circle_loop();
+		eclipse_line();
 	}
 	
 	public static void lab3_Excercise()
@@ -45,4 +48,22 @@ public class Main
 		String[] a = {"MAIN"};
         processing.core.PApplet.runSketch( a, new firstloop());
     }
+	
+	public static void second_loop ()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new second_loop());
+    }
+
+	public static void Circle_loop ()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new Circle_loop()); 
+	}
+
+	public static void eclipse_line ()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new eclipse_line()); 
+	}
 }
