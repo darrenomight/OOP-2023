@@ -34,7 +34,8 @@ public class Main
 		//firstloop();
 		//second_loop();
 		//Circle_loop();
-		eclipse_line();
+		//eclipse_line();
+		Fizz_Buzz();
 	}
 	
 	public static void lab3_Excercise()
@@ -65,5 +66,10 @@ public class Main
 	{
 		String[] a = {"MAIN"};
         processing.core.PApplet.runSketch( a, new eclipse_line()); 
+	}
+
+	public static void Fizz_Buzz()
+	{
+		
 	}
 }
