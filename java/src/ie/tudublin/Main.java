@@ -1,5 +1,7 @@
 package ie.tudublin;
 
+import processing.core.PApplet;
+import java.util.Scanner;
 
 public class Main
 {
@@ -35,8 +37,36 @@ public class Main
 		//firstloop();
 		//second_loop();
 		//Circle_loop();
-		eclipse_line();
-		//Fizz_Buzz();
+		//eclipse_line();
+		for (int x = 1; x <= 100; x++)
+        {
+            if(x%3 == 0)
+            {
+                System.out.println("FIZZ");
+            }
+            
+    
+            if(x%5 == 0)
+            {
+                System.out.println("BUZZ");
+            }
+    
+            if(x%3 == 0 && x%5 == 0)
+            {
+                System.out.println("FIZZBUZZ");
+            }
+    
+            else
+            {
+                System.out.println(x);
+            }
+        }
+		
+		Scanner myObj = new Scanner(System.in);  // Create a Scanner object
+		System.out.println("Enter username");
+
+		String userName = myObj.nextLine();  // Read user input
+		System.out.println("Username is: " + userName);  // Output user input
 	}
 	
 	public static void lab3_Excercise()
@@ -67,11 +97,6 @@ public class Main
 	{
 		String[] a = {"MAIN"};
         processing.core.PApplet.runSketch( a, new eclipse_line()); 
-	}
-
-	public static void Fizz_Buzz()
-	{
-
 	}
 	//{	
 		//String[] a = {"MAIN"};
