@@ -1,5 +1,6 @@
 package ie.tudublin;
 
+
 public class Fizz_Buzz{
 
     public void main()

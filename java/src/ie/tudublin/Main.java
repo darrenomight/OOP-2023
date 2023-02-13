@@ -1,5 +1,6 @@
 package ie.tudublin;
 
+
 public class Main
 {
 
@@ -34,8 +35,8 @@ public class Main
 		//firstloop();
 		//second_loop();
 		//Circle_loop();
-		//eclipse_line();
-		Fizz_Buzz();
+		eclipse_line();
+		//Fizz_Buzz();
 	}
 	
 	public static void lab3_Excercise()
@@ -70,6 +71,12 @@ public class Main
 
 	public static void Fizz_Buzz()
 	{
-		
+
 	}
+	//{	
+		//String[] a = {"MAIN"};
+        //processing.core.PApplet.runSketch( a, new Fizz_Buzz()); 
+	//}
+		
+	
 }
