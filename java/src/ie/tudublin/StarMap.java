@@ -11,10 +11,9 @@ public class StarMap extends PApplet
 
 	public void setup() {
 		colorMode(HSB);
-		background(255);
+		background(100);
 
 		smooth();
-		line(  50, 100, 100, 150);
 		
 	}
 
@@ -28,8 +27,14 @@ public class StarMap extends PApplet
 		for (int i = -5; i <= 5; i++)
 		{
 			float x = border + (gap * (i + 5));
+			stroke(200,255,255);
 			line(x, border, x, height - border);
 			line(border,x,width-border,x);
+			
+			fill(0);
+			textSize(11);
+			text(i, x, border- 20);
+			text(i, border - 30, x);
 			
 			
 				
