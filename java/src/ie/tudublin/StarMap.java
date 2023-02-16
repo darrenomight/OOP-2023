@@ -8,16 +8,19 @@ import processing.data.Table;
 
 import java.util.ArrayList;
 
+
+
 public class StarMap extends PApplet
 {
 	public void settings()
 	{
-		size(800, 800);
+		//fullScreen();
+		size(850, 800);
 		loadStars();
 	}
 
 	public void setup() {
-		colorMode(HSB);
+		colorMode(RGB);
 		background(0);
 		
 		smooth();
@@ -28,7 +31,7 @@ public class StarMap extends PApplet
 
 	public void drawGrid()
 	{
-		stroke(255);
+		stroke(0);
 		float border = 50.0f;
 
 		int count = 10;
@@ -41,7 +44,8 @@ public class StarMap extends PApplet
 			line(x, border, x, height - border);
 			line(border, x, width - border, x);
 
-			fill(265,70,80);
+			fill(255,255,255);
+			textAlign(CENTER,CENTER);
 			text(i, x, border - 20);
 			text(i, border - 20, x);
 		}
@@ -74,6 +78,7 @@ public class StarMap extends PApplet
  
 		drawGrid();
 		drawStar();
+		mousePressed();
 	}
 
 	public void drawStar()
@@ -83,13 +88,36 @@ public class StarMap extends PApplet
 			float x = map(s.xG,-5,5,50, width - 50);
 			float y = map(s.yG,-5,5,50, width -50);
 			fill(120,100,100);
-			stroke (255,255,255);
+			stroke (255,0,0);
 			
 			noFill();
+			
 			circle(x,y,s.absMag);
-
+			stroke(239, 245, 66);
+			line (x-5, y, x + 5, y);
+			line (x, y-5 , x , y + 5);
+			
+			textAlign(LEFT,CENTER);
 			text(s.displayName, x, y);
 		}
 	}
+
+	
+
+	public void mousePressed() 
+	{
+		
+		if (mousePressed == true)
+		stroke(255,0,0);
+		line (mouseX, mouseY, pmouseX, pmouseY);
+		//1ststar
+		//2ndstar
+	
+		
+	}
+	
+
+
+
  
 }
