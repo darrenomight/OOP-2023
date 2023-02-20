@@ -5,11 +5,14 @@ import java.util.ArrayList;
 import processing.core.PApplet;
 import processing.data.Table;
 import processing.data.TableRow;
+<<<<<<< HEAD
 
 import processing.data.TableRow;
 import processing.data.Table;
 
 import java.util.ArrayList;
+=======
+>>>>>>> f004ec63651efe3961894a3e9651182ab72df43c
 
 public class StarMap extends PApplet
 {
@@ -26,6 +29,10 @@ public class StarMap extends PApplet
 		background(0);
 		
 		smooth();
+<<<<<<< HEAD
+=======
+
+>>>>>>> f004ec63651efe3961894a3e9651182ab72df43c
 		loadStars();
 		printStars();
 	}
@@ -63,6 +70,7 @@ public class StarMap extends PApplet
 
 		for(int i = -5 ; i <= 5 ; i ++)
 		{
+<<<<<<< HEAD
 
 			float x = border + (gap * (i + 5));
 			stroke(255,100,100);
@@ -72,12 +80,22 @@ public class StarMap extends PApplet
 			fill(265,70,80);
 			text(i, x, border - 20);
 			text(i, border - 20, x);
+=======
+			float x = map(i, -5, 5, border, width - border);
+			line(x, border, x, height - border);
+			line(border, x, width - border, x);
+
+			textAlign(CENTER, CENTER);
+			text(i, x, border * 0.5f);
+			text(i, border * 0.5f, x);
+>>>>>>> f004ec63651efe3961894a3e9651182ab72df43c
 		}
 
 		//float f = map(5, 0, 10, 100, 200);
 		//float f1 = map1(5, 0, 10, 100, 200);
 		
 	}
+<<<<<<< HEAD
 	
 	ArrayList<Star> stars = new ArrayList<Star>();	
 	
@@ -105,6 +123,25 @@ public class StarMap extends PApplet
  
 		drawGrid();
 		drawStar();
+=======
+
+	float map1(float a, float b, float c, float d, float e)
+	{
+		float r1 = c -b;
+		float r2 = e - d;
+
+		float howFar = a - b;
+
+		return d + ((howFar / r1) * r2);
+	}
+		
+	public void draw()
+	{	
+		strokeWeight(1);		
+
+		drawGrid();
+		displayStars();
+>>>>>>> f004ec63651efe3961894a3e9651182ab72df43c
 	}
 
 	public void drawStar()
