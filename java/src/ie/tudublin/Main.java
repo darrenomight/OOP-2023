@@ -39,7 +39,7 @@ public class Main
         processing.core.PApplet.runSketch( a, new Audio2());
     }
 
-	public static void audio3()
+	public static void Audio3()
 	{
 		String[] a = {"MAIN"};
         processing.core.PApplet.runSketch( a, new Audio3());
@@ -53,11 +53,12 @@ public class Main
 		penny.setName("Penny");
 		penny.speak();
 
-		audio3();
+		//audio2();
 		PitchSpeller ps = new PitchSpeller();
     	System.out.println(ps.spell(330));
     	System.out.println(ps.spell(420));
     	System.out.println(ps.spell(1980));
+		Audio3();
 	}
 	
 }
