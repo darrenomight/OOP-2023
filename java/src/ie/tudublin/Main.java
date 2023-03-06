@@ -50,6 +50,8 @@ public class Main
 		String[] a = {"MAIN"};
         processing.core.PApplet.runSketch( a, new Life());
     }
+
+	
 	
 	public static void main(String[] args)
 	{
@@ -64,7 +66,8 @@ public class Main
     	System.out.println(ps.spell(330));
     	System.out.println(ps.spell(420));
     	System.out.println(ps.spell(1980));
-		Audio3();
+		//Audio3();
+		life();
 	}
 	
 }
