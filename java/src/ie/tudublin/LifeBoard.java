@@ -6,7 +6,7 @@ public class LifeBoard {
     boolean [][] board; //declare an 2d array
     boolean [][] next;
 
-
+    public int key = 9;
     private int size;
     PApplet p;
 
@@ -161,4 +161,33 @@ public class LifeBoard {
     public void setSize(int size) {
         this.size = size;
     } 
+
+    public void clear()
+    {
+        for (int row = 0; row < size; row ++)
+        {
+            for (int col = 0; col < size; col ++)
+            {
+                float dice = p.random(0.0f,1.0f);
+                board[row][col] = (dice <= 0.0f);
+            }
+        }
+    }
+    
+    public void cross()
+    { 
+        for(int row = 0; row < size; row ++)
+        {
+            board[row][size/2] = true;
+        }
+
+        for (int col = 0; col < size; col ++)
+        {
+            board[size/2][col] = true;
+        }
+        
+    }
+        
+        
+    
 }
