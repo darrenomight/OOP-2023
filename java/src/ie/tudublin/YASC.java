@@ -5,9 +5,12 @@ import processing.core.PApplet;
 public class YASC extends PApplet
 {
 
+	Ship ship;
+
 	public void settings()
 	{
 		size(500, 500);
+		
 	}
 
 	public void setup() {
@@ -19,6 +22,6 @@ public class YASC extends PApplet
 	
 	public void draw()
 	{	
-		
+		ship.render();
 	}
 }
