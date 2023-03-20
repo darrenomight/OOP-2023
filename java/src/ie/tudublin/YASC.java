@@ -11,7 +11,7 @@ public class YASC extends PApplet
 	}
 
 	public void setup() {
-		
+		ship = new Ship(width/ 2, height/2, , , )
 		
 	}
 
