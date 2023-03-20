@@ -14,14 +14,18 @@ public class YASC extends PApplet
 	}
 
 	public void setup() {
-		ship = new Ship(width/ 2, height/2, , , )
-		
+		ship = new Ship(width/ 2, height/2,  50 , 70 ,this );
+		colourmode(HSB);
 	}
 
 	
 	
 	public void draw()
 	{	
+		background (0);
 		ship.render();
+		ship.move();
 	}
+
+	
 }
