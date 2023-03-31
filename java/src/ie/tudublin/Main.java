@@ -56,14 +56,16 @@ public class Main
 		String[] a = {"MAIN"};
         processing.core.PApplet.runSketch( a, new YASC());
     }
+
+	public static void Project()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new Project());
+    }
 	
 	public static void main(String[] args)
 	{
-		System.out.println("Hello world");
-		
-		Dog penny = new Dog();
-		penny.setName("Penny");
-		penny.speak();
+		System.out.println("Hello, Darren - from mommy - norbert 02");
 
 		/*
 		
@@ -74,7 +76,8 @@ public class Main
 		Audio3();
 		*/
 		//yasc();
-		audio1();
+		//audio1();
+		Project();
 		
 	}
 	
