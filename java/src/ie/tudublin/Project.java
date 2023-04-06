@@ -95,7 +95,7 @@ public class Project extends PApplet
                     float c = map(i, 0, ab.size(), 0, 255);
                     stroke(c, 255, 255);
                     float f = lerpedBuffer[i] * halfH * 4.0f;
-                    line(halfW + f, i, halfH - f, i);                    
+                    line(cx - f , i, cy + f, i);                    
                 }
                 break;
         //rect(i, halfH - f * smoothedAmplitude, i, halfH + f * smoothedAmplitude);        
@@ -108,9 +108,11 @@ public class Project extends PApplet
             float c = map(i, 0, ab.size(), 0, 255);
             stroke(c, 255, 255);
             fill(c,255,255);
+            //top line
             float f = lerpedBuffer[i] * halfH * 4.0f;
-            //rect(i, (height * smoothedAmplitude), i, (quarterh + f * smoothedAmplitude);
-            rect(i, (600 + f * smoothedAmplitude) , i, (quarterh ) *( smoothedAmplitude));
+            rect(halfW - f * smoothedAmplitude, i, 0 + f * smoothedAmplitude, i);
+            //across
+            rect(i, (600 + f * smoothedAmplitude) , i, (quarterh ) * ( smoothedAmplitude));
         }
         break;
        
@@ -119,7 +121,7 @@ public class Project extends PApplet
             background(0);
             for(int i = 0 ; i < ab.size() ; i ++)
             {
-                float c = map(i, 0, ab.size(), mouseX /2, mouseY/ 2);
+                float c = map(i, 0, ab.size(), 0, 255);
                 stroke(c, 255, 255);
                 float f = lerpedBuffer[i] * halfH * 4.0f;
                 line(0, i, f, i);              
@@ -128,9 +130,38 @@ public class Project extends PApplet
                 line(i, height, i, height - f);              
             }
             break;          
-        }
+            
+            case 3:
+            {
+                background(0);
+                for(int i = 0 ; i < ab.size() ; i ++)
+                {
+                    float theta = 90;
+                    strokeWeight(32);
+                    strokeCap(SQUARE);
+                    noFill();
+                    //noLoop();
+                    float c = map(i, 0, ab.size(), 0, 255);
+                    stroke(c, 255, 255);
+                    float f = lerpedBuffer[i] * halfH * 4.0f;
+                    
+                    stroke(c, 255, 255);
+                    //arc(halfW, halfH, i + (400 * f), (400 * f) - i, 0, PI);
+                    //arc(halfW,halfH, 400,400,0,PI);
+                    ellipse(halfW, halfH,i + (400 + f), i - (400 * f));
+                    rotate(i + theta);
+                
+                }
+                break; 
+            } // end case 3
+        
+        } //End Case
 
+    }// End Draw
+            
+         
 
+        
         
         // Other examples we made in the class
         /*
@@ -145,7 +176,5 @@ public class Project extends PApplet
         circle(200, smoothedY, 50);
         */
 
-    }        
-}
-
+}            
 
