@@ -148,13 +148,25 @@ public class Project extends PApplet
                     stroke(c, 255, 255);
                     //arc(halfW, halfH, i + (400 * f), (400 * f) - i, 0, PI);
                     //arc(halfW,halfH, 400,400,0,PI);
-                    ellipse(halfW, halfH,i + (400 + f), i - (400 * f));
+                    //ellipse(halfW, halfH,i + (400 + f), i - (400 * f));
                     rotate(i + theta);
                 
                 }
                 break; 
             } // end case 3
-        
+            case 4:
+            {
+                for (int i = 0; i < ab.size(); i++) {
+					// float c = map(ab.get(i), -1, 1, 0, 255);
+					float c = map(i, 0, ab.size(), 0, 255);
+					stroke(c, 255, 255);
+					float f = ab.get(i) * halfH;
+					circle(cx, cy, f * 10);
+				}
+				break;
+
+				
+            }
         } //End Case
 
     }// End Draw
