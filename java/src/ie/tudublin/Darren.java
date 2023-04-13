@@ -4,17 +4,17 @@ import processing.core.PApplet;
 
 public class Darren 
 {
-    private PApplet p;
+    private MyVisual mv;
     private bubbles b;
     
-    public Darren(PApplet p, )
+    public Darren(MyVisual mv )
     {
-        this.p = p;
-        b = new bubbles(width,height, p);
+        this.mv = mv;
+        b = new bubbles(mv.width,mv.height, mv);
     }
 
     public void render()
     {
-        
+        b.render();
     }
 }

@@ -60,8 +60,14 @@ public class Main
 	public static void Project()
 	{
 		String[] a = {"MAIN"};
-        processing.core.PApplet.runSketch( a, new Project());
+        processing.core.PApplet.runSketch( a, new MyVisual());
     }
+
+	//public static void Project()
+	//{
+	//	String[] a = {"MAIN"};
+    //    processing.core.PApplet.runSketch( a, new Project());
+    //}
 	
 	public static void main(String[] args)
 	{
@@ -78,7 +84,7 @@ public class Main
 		//yasc();
 		//audio1();
 		Project();
-		//YASC();
+		//loops();
 		
 	}
 	
