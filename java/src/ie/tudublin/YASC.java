@@ -111,7 +111,7 @@ public class YASC extends PApplet
 		
 
 		fill(255);
-		text("Bullets: " + bullets.size(), 50, 50);
+		text("Game Objects: " + bullets.size(), 50, 50);
 
 	}
 }
