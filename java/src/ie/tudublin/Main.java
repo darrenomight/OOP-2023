@@ -81,9 +81,10 @@ public class Main
     	System.out.println(ps.spell(1980));
 		Audio3();
 		*/
-		//yasc();
+		//
+		yasc();
 		//audio1();
-		Project();
+		//Project();
 		//loops();
 		
 	}
