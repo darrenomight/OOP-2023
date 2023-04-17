@@ -6,7 +6,7 @@ import processing.core.PVector;
 public class Bullet {
     PVector pos;
     float rot;
-    float speed;
+    private float speed;
     PVector forward;
     PApplet p;
     int c;
@@ -16,12 +16,9 @@ public class Bullet {
 
     public Bullet(float x, float y, float rot, int c, PApplet p)
     {
-        pos = new PVector(x, y);
-        forward = new PVector(0, -1);
+        super(x, y, rot, c, p);
+        
         speed = 5;
-        this.p = p;
-        this.rot = rot;
-        this.c = c;
         creationTime = p.millis();
 
     }

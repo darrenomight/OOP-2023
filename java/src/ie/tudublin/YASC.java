@@ -90,7 +90,13 @@ public class YASC extends PApplet
 	}
 
 	public void draw()
-	{	background(0);
+	{	
+		fill(0,20);
+		rect(0, 0, width, height);
+		noStroke();
+		//background(0);
+		
+		
 		ship.render();
 		ship.move();
 
