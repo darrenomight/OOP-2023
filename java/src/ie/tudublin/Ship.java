@@ -3,7 +3,8 @@ package ie.tudublin;
 import processing.core.PApplet;
 import processing.core.PVector;
 
-public class Ship extends GameObject {
+public class Ship extends GameObject 
+{
     
     float size;
     float halfSize;
