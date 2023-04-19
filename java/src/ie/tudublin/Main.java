@@ -82,9 +82,9 @@ public class Main
 		Audio3();
 		*/
 		//
-		yasc();
+		//yasc();
 		//audio1();
-		//Project();
+		Project();
 		//loops();
 		
 	}
