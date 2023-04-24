@@ -48,7 +48,7 @@ public class Project extends PApplet
         // ab = ai.mix; 
 
         // And comment the next two lines out
-        ap = minim.loadFile("MobyDuck.wav", 1024);
+        ap = minim.loadFile("Moby Duck.mp3", 1024);
         ap.play();
         ab = ap.mix;
         colorMode(HSB);

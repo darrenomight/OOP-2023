@@ -57,11 +57,11 @@ public class Main
         processing.core.PApplet.runSketch( a, new YASC());
     }
 
-	public static void Project()
-	{
-		String[] a = {"MAIN"};
-        processing.core.PApplet.runSketch( a, new MyVisual());
-    }
+	//public static void Project()
+	//{
+	//	String[] a = {"MAIN"};
+    //    processing.core.PApplet.runSketch( a, new MyVisual());
+    // }
 
 	//public static void Project()
 	//{
@@ -84,7 +84,7 @@ public class Main
 		//
 		//yasc();
 		//audio1();
-		Project();
+		//Project();
 		//loops();
 		
 	}
